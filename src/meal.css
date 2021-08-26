@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.col-3{
+    width: 25%;
+    padding: 0 15px;
+}
+.meal-link{
+    text-decoration: none;
+    color: #000;
+
+}
+.meal-title{
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.meal-img{
+    object-fit: contain;
+    width: 400px;
+    height: 100%;
+}
+.box{
+    width: 250px;
+}
+.box img{
+    width: 100%;
+    object-fit: contain;
+}
+.ing-wrapper{
+    width: 200px;
+}
+.ing-wrapper img{
+    width: 150px;
+    object-fit: contain;
+}
