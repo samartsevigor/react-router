@@ -35,7 +35,7 @@ const [meal, setMeal] = useState({})
          <div className="row">
              {
                  ingred.map(item=> (
-                     <div className ="col-3 ing-wrapper" >
+                     <div  className ="col-3 ing-wrapper" >
                          <div>{item}</div>
                          <img src={`https://www.themealdb.com/images/ingredients/${item}.png`} alt=""/>
                      </div>

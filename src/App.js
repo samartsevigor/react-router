@@ -5,16 +5,21 @@ import UserDetails from "./UserDetails";
 import Meal from "./Meal";
 import MealDetails from "./MealDetails";
 import Browser from "./Browser";
+import Search from "./Search";
+import Home from "./Home";
+import Header from "./Header";
 
 function App() {
   return (
 
     <Router>
-    <Route exact path="/" > <Meal /> </Route>
+      <Header />
+    <Route exact path="/" > <Home/> </Route>
+    <Route path="/meal" ><Search /> <Meal /> </Route>
       <Route path="/meal/:id" > <MealDetails /></Route>
-      <Route path="/browse/:name" > <Browser /></Route>
-      {/*<Route exact path="/"> <User /> </Route>*/}
-      {/*<Route path="/user/:id" > <UserDetails/> </Route>*/}
+      <Route path="/browse/:name"> <Browser /></Route>
+      <Route path="/user"> <User /> </Route>
+      <Route path="/user/:id" > <UserDetails/> </Route>
 
     </Router>
   );
