@@ -8,7 +8,6 @@ const [meal, setMeal] = useState({})
     const [ingred, setIngred] = useState([])
     const params = useParams()
 
-
     useEffect(()=> {
     axios(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.id}`)
         .then((res)=>{
@@ -19,13 +18,12 @@ const [meal, setMeal] = useState({})
                } return  acc
 
             },[])
-            console.log(strIng)
+
             setIngred(strIng)
             setMeal(obj)
         })
 
-
-},[])
+},[params.id])
 
     return (
         <div>
@@ -35,7 +33,7 @@ const [meal, setMeal] = useState({})
          <div className="row">
              {
                  ingred.map(item=> (
-                     <div  className ="col-3 ing-wrapper" >
+                     <div key={item.idMeal} className ="col-3 ing-wrapper" >
                          <div>{item}</div>
                          <img src={`https://www.themealdb.com/images/ingredients/${item}.png`} alt=""/>
                      </div>

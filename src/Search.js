@@ -4,7 +4,7 @@ import "./meal.css"
 
 const Search = () => {
     const [search, setSearch] = useState("")
-    // const filteredMeal = meal.filter(el=>el.name.toLowerCase().includes(search))
+
 
     const handleInput =(e) => {
         setSearch(e.target.value.toLowerCase())

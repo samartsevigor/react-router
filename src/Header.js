@@ -10,8 +10,6 @@ const Header = () => {
                <Link to="/user"  className="nav-link"    > User </Link>
            </nav>
 
-
-
         </div>
     );
 };

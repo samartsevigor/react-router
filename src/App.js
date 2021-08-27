@@ -15,10 +15,10 @@ function App() {
     <Router>
       <Header />
     <Route exact path="/" > <Home/> </Route>
-    <Route path="/meal" ><Search /> <Meal /> </Route>
+    <Route exact path="/meal" ><Search /> <Meal /> </Route>
       <Route path="/meal/:id" > <MealDetails /></Route>
       <Route path="/browse/:name"> <Browser /></Route>
-      <Route path="/user"> <User /> </Route>
+      <Route exact path="/user"> <User /> </Route>
       <Route path="/user/:id" > <UserDetails/> </Route>
 
     </Router>
