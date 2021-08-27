@@ -10,7 +10,7 @@ const UserDetails = () => {
     useEffect(()=> {
         axios(`https://jsonplaceholder.typicode.com/users/${params.id}`)
             .then(({data})=>setUser(data))
-    },[])
+    },[params.id])
 
     return (
         <div>
