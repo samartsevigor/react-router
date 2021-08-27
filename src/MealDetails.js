@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import axios from "axios";
 import "./meal.css"
 
@@ -32,10 +32,12 @@ const [meal, setMeal] = useState({})
             <img src={meal.strMealThumb} alt="" className="meal-img"/>\
          <div className="row">
              {
-                 ingred.map(item=> (
-                     <div key={item.idMeal} className ="col-3 ing-wrapper" >
-                         <div>{item}</div>
-                         <img src={`https://www.themealdb.com/images/ingredients/${item}.png`} alt=""/>
+                 ingred.map((item, idx)=> (
+                     <div key={idx} className ="col-3 ing-wrapper" >
+                     <Link to={`/ingredients/${item}`}>
+                            <div>{item}</div>
+                            <img src={`https://www.themealdb.com/images/ingredients/${item}.png`} alt=""/>
+                    </Link>
                      </div>
                  ))
              }

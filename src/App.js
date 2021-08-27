@@ -8,18 +8,20 @@ import Browser from "./Browser";
 import Search from "./Search";
 import Home from "./Home";
 import Header from "./Header";
+import Ingredients from "./Ingredients";
 
 function App() {
   return (
 
     <Router>
       <Header />
-    <Route exact path="/" > <Home/> </Route>
-    <Route exact path="/meal" ><Search /> <Meal /> </Route>
+      <Route exact path="/" > <Home/> </Route>
+      <Route exact path="/meal" ><Search /> <Meal /> </Route>
       <Route path="/meal/:id" > <MealDetails /></Route>
       <Route path="/browse/:name"> <Browser /></Route>
       <Route exact path="/user"> <User /> </Route>
       <Route path="/user/:id" > <UserDetails/> </Route>
+      <Route path="/ingredients/:name" > <Ingredients/> </Route>
 
     </Router>
   );

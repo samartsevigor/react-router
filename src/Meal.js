@@ -7,8 +7,6 @@ const Meal = () => {
     const [meals, setMeals] = useState([])
 
 
-    // const filteredMeals = meals.filter(el=>el.name.toLowerCase().includes(search))
-
     useEffect(()=> {
         axios('https://www.themealdb.com/api/json/v2/1/randomselection.php')
             .then((res)=> setMeals(res.data.meals))
