@@ -10,6 +10,7 @@ import Home from "./Home";
 import Header from "./Header";
 import Ingredients from "./Ingredients";
 import "./meal.css"
+import PageNotFound from "./PageNotFound";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route exact path="/user"> <User /> </Route>
             <Route path="/user/:id" > <UserDetails/> </Route>
             <Route path="/ingredients/:name" > <Ingredients/> </Route>
+            <Route path = "*" > <PageNotFound/> </Route>
         </Router>
     </div>
   );
