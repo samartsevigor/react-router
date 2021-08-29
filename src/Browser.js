@@ -7,9 +7,8 @@ import "./meal.css"
 const Browser = () => {
     const [meal, setMeal] = useState([])
     const [error, setError] = useState("")
-
-
     const params = useParams()
+
 
     useEffect(()=>{
         axios(`https://www.themealdb.com/api/json/v1/1/search.php?s=${params.name}`)
@@ -20,8 +19,6 @@ const Browser = () => {
                     setError("Такого блюда нет")
                 }
             })
-
-
 
     },[params.name])
 
@@ -41,6 +38,7 @@ const Browser = () => {
                }
            </div>
             <h2 className="error-text">{error}</h2>
+
         </div>
     );
 };

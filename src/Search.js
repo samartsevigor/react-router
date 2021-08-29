@@ -12,7 +12,6 @@ const history= useHistory()
         if(search.trim()) {
             history.push(`/browse/${search}`)
         }
-
     }
 
     return (

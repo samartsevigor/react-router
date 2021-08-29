@@ -3,7 +3,6 @@ import {Link, useHistory} from "react-router-dom";
 
 const Header = () => {
         let history = useHistory();
-
         function handleClick() {
             history.goBack("/home");
         }
@@ -15,7 +14,7 @@ const Header = () => {
                <Link to="/meal" className="nav-link"> Meal </Link>
                <Link to="/user"  className="nav-link" > User </Link>
                <button type="button" onClick={handleClick}  className="search-btn">
-                   Go home
+                   Go back
                </button>
            </nav>
 
