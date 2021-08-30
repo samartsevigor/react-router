@@ -5,7 +5,7 @@ import "./meal.css"
 
 const MealDetails = () => {
     const [meal, setMeal] = useState({})
-    const [youtube, setYoutube] = useState("")
+
     const [ingred, setIngred] = useState([])
     const params = useParams()
 
@@ -18,10 +18,8 @@ const MealDetails = () => {
                         return [...acc, obj[`strIngredient${idx + 1}`]]
                     }
                     return acc
-                    const str = obj.strYoutube.slice(obj.strYoutube.indexOf("v=" + 2), obj.strYoutube.length)
-                    console.log(str)
-                    setYoutube(str)
-                }, [])
+
+                }, [params.id])
 
                 setIngred(strIng)
                 setMeal(obj)
@@ -54,12 +52,7 @@ const MealDetails = () => {
                 <div> <h4> Instructions:</h4> {meal.strInstructions}</div>
             </div>
         </div>
-            {
-                <iframe width="560" height="315" src={`https://www.youtube.com/embed/${youtube}`}
-                        title="YouTube video player" frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen></iframe>
-            }
+
         </div>
     );
 };

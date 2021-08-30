@@ -10,7 +10,8 @@ import Home from "./Home";
 import Header from "./Header";
 import Ingredients from "./Ingredients";
 import "./meal.css"
-import PageNotFound from "./PageNotFound";
+import LetterMeal from "./LetterMeal";
+
 
 function App() {
   return (
@@ -20,12 +21,13 @@ function App() {
             <Header />
             <Route exact path="/" > <Home/> </Route>
             <Route exact path="/meal" ><Search /> <Meal /> </Route>
+            <Route path="/search/:letter"> <LetterMeal /></Route>
             <Route path="/meal/:id" > <MealDetails /></Route>
             <Route path="/browse/:name"> <Browser /></Route>
             <Route exact path="/user"> <User /> </Route>
             <Route path="/user/:id" > <UserDetails/> </Route>
             <Route path="/ingredients/:name" > <Ingredients/> </Route>
-            <Route path = "*" > <PageNotFound/> </Route>
+
         </Router>
     </div>
   );
