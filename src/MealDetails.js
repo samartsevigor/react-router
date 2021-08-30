@@ -18,7 +18,7 @@ const MealDetails = () => {
                         return [...acc, obj[`strIngredient${idx + 1}`]]
                     }
                     return acc
-                }, [params.id])
+                }, [])
                 setIngred(strIng)
                 setMeal(obj)
                 setYoutube(obj.strYoutube.slice(obj.strYoutube.indexOf("v=") + 2, obj.strYoutube.lenght))

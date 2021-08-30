@@ -21,7 +21,6 @@ function App() {
             <Header />
             <Route exact path="/" > <Home/> </Route>
             <Route exact path="/meal" ><Search /> <Meal /> </Route>
-
             <Route path="/meal/:id" > <MealDetails /></Route>
             <Route path="/browse/:name"> <Browser /></Route>
             <Route exact path="/user"> <User /> </Route>
