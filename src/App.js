@@ -10,7 +10,7 @@ import Home from "./Home";
 import Header from "./Header";
 import Ingredients from "./Ingredients";
 import "./meal.css"
-import LetterMeal from "./LetterMeal";
+
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
             <Header />
             <Route exact path="/" > <Home/> </Route>
             <Route exact path="/meal" ><Search /> <Meal /> </Route>
-            <Route path="/search/:letter"> <LetterMeal /></Route>
+
             <Route path="/meal/:id" > <MealDetails /></Route>
             <Route path="/browse/:name"> <Browser /></Route>
             <Route exact path="/user"> <User /> </Route>
