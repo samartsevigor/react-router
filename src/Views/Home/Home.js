@@ -5,7 +5,7 @@ import {useHistory} from "react-router-dom"
 const Home = () => {
     const history = useHistory()
 const handleClick =() => {
-    history.push("/meal")
+    history.push("/meals")
 }
 
     return (

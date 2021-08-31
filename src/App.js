@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import Meal from "./Views/Meals/Meal";
+import Meals from "./Views/Meals/Meals";
 import MealDetails from "./Views/MealDetails/MealDetails";
 import Browse from "./Views/Browse/Browse";
 import Search from "./Components/Search/Search";
@@ -16,7 +16,7 @@ function App() {
         <Router>
             <Header />
             <Route exact path="/" > <Home/> </Route>
-            <Route exact path="/meals" ><Search /> <Meal /> </Route>
+            <Route exact path="/meals" ><Search /> <Meals /> </Route>
             <Route path="/meals/:id" > <MealDetails /></Route>
             <Route path="/browse/:name"> <Browse /></Route>
             <Route path="/ingredients/:name" > <Ingredients/> </Route>

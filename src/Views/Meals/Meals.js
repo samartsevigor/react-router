@@ -4,7 +4,7 @@ import MealsList from "../../Components/MealsList/MealsList";
 import {useHistory} from "react-router-dom";
 
 
-const Meal = () => {
+const Meals = () => {
     const [meals, setMeals] = useState([])
 
     useEffect(()=> {
@@ -14,10 +14,8 @@ const Meal = () => {
     },[])
     let history = useHistory();
     function handleClick() {
-        history.goBack("/home");
+        history.goBack("/home")
     }
-
-
 
     return (
             <div >
@@ -29,4 +27,4 @@ const Meal = () => {
     );
 };
 
-export default Meal;
+export default Meals;

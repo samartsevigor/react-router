@@ -38,7 +38,6 @@ const MealDetails = () => {
                 <div className="col-6">
                         <Ingredients ingredients={ingredients} />
                 </div>
-
                 <button type="button" onClick={handleClick}  className="goBack-btn">
                     Go back
                 </button>
