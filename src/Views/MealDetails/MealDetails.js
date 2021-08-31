@@ -5,7 +5,7 @@ import Youtube from "../../Components/Youtube/Youtube";
 import Ingredients from "../../Components/Ingredients/Ingredients";
 
 const MealDetails = () => {
-    const [meals, setMeals] = useState({})
+    const [meal, setMeal] = useState({})
     const [youtube, setYoutube] = useState("")
     const [ingredients, setIngredients] = useState([])
     const params = useParams()
@@ -17,7 +17,7 @@ const MealDetails = () => {
                     return ingredient ? [...acc, ingredient] : acc
                 }, [])
         setIngredients(ingredientsList)
-            setMeals(meals[0])
+            setMeal(meals[0])
         const youtubeCode = meals[0].strYoutube.slice(meals[0].strYoutube.indexOf("v=") + 2, meals[0].strYoutube.lenght)
             setYoutube(youtubeCode)
     }, [params.id])
@@ -30,9 +30,9 @@ const MealDetails = () => {
     return (
             <div className="row">
                 <div className="col-6">
-                    <img src={meals.strMealThumb} alt="" className="meal-img"/>
-                    <h4 className="meal-title">{meals.strMeal}</h4>
-                    <p className="meal-title"> Instructions: {meals.strInstructions} </p>
+                    <img src={meal.strMealThumb} alt="" className="meal-img"/>
+                    <h4 className="meal-title">{meal.strMeal}</h4>
+                    <p className="meal-title"> Instructions: {meal.strInstructions} </p>
                     <Youtube youtube={youtube}/>
                 </div>
                 <div className="col-6">
