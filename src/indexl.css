@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Philosopher", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.col-3{
+    width: 25%;
+    padding: 0 15px;
+}
+.col-6{
+    width: 50%;
+    padding: 0 15px;
+}
+.meal-item{
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 75px 10px 10px 10px;
+    margin-bottom: 15px;
+}
+.meal-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    border-radius: 70px 10px 70px 10px;
+}
+
+.meal-link{
+    text-decoration: none;
+    color: #000;
+
+}
+.meal-title{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.meal-img{
+    object-fit: contain;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.ing-wrapper{
+    width: 200px;
+}
+.ing-wrapper img{
+    width: 150px;
+    object-fit: contain;
+}
+.input-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid teal;
+    text-align: center;
+}
+.btn{
+    padding: 6px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: 1px solid teal;
+    background-color: #fff;
+    cursor: pointer;
+    font-family: "Philosopher", sans-serif;
+}
+.btn:hover{
+    background-color:teal ;
+    color: #fff;
+}
+.goBack-btn{
+    padding: 6px 10px;
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid teal;
+    background-color: #fff;
+    cursor: pointer;
+    font-family: "Philosopher", sans-serif;
+    font-size: 20px;
+    text-align: center;
+
+}
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nav{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nav-link{
+    margin: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+}
+
+.error-text{
+    text-align: center;
+    margin-top: 25px;
+}
+.box:hover{
+   box-shadow: 11px 13px 21px 11px #ededed
+}
+.home-title{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 48px;
+    line-height: 58px;
+}
+.home-desc{
+    font-weight: 500;
+    font-size: 25px;
+}
+.details-img{
+    border-radius: 10px;
+}
+.main-link{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: teal;
+    background-color: #fff;
+    border: 1.5px solid teal;
+    border-radius: 5px;
+    padding: 20px 40px;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.main-link:hover{
+    background: #adefef;
+    color: #FFFFFF;
+}

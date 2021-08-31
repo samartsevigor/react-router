@@ -1,17 +1,13 @@
 import React from "react";
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import User from "./User";
-import UserDetails from "./UserDetails";
-import Meal from "./Meal";
-import MealDetails from "./MealDetails";
-import Browser from "./Browser";
-import Search from "./Search";
-import Home from "./Home";
-import Header from "./Header";
-import Ingredients from "./Ingredients";
-import "./meal.css"
-
-
+import Meal from "./Views/Meals/Meal";
+import MealDetails from "./Views/MealDetails/MealDetails";
+import Browse from "./Views/Browse/Browse";
+import Search from "./Components/Search/Search";
+import Home from "./Views/Home/Home";
+import Header from "./Components/Header/Header";
+import Ingredients from "./Views/Ingredients/Ingredients";
+import "./indexl.css"
 
 function App() {
   return (
@@ -20,11 +16,9 @@ function App() {
         <Router>
             <Header />
             <Route exact path="/" > <Home/> </Route>
-            <Route exact path="/meal" ><Search /> <Meal /> </Route>
-            <Route path="/meal/:id" > <MealDetails /></Route>
-            <Route path="/browse/:name"> <Browser /></Route>
-            <Route exact path="/user"> <User /> </Route>
-            <Route path="/user/:id" > <UserDetails/> </Route>
+            <Route exact path="/meals" ><Search /> <Meal /> </Route>
+            <Route path="/meals/:id" > <MealDetails /></Route>
+            <Route path="/browse/:name"> <Browse /></Route>
             <Route path="/ingredients/:name" > <Ingredients/> </Route>
 
         </Router>

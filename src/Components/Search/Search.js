@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { useHistory} from "react-router-dom";
-import "./meal.css"
+
+
 
 const Search = () => {
     const [search, setSearch] = useState("")
@@ -14,12 +15,16 @@ const history= useHistory()
         }
     }
 
+    const handleKeyPress =(e) => {
+        if(e.key==="Enter") {
+            handleClick()
+        }
+    }
+
     return (
         <div className="search-box" >
-            <div>
-                <input type="text"  onChange={handleInput}   value={search}/>
-                <button className="search-btn" onClick={handleClick}> Get</button>
-            </div>
+                <input type="text"  onChange={handleInput} onKeyUp={handleKeyPress}  placeholder="Search..." value={search}/>
+                <button className="btn" onClick={handleClick}> Get</button>
         </div>
     );
 };
