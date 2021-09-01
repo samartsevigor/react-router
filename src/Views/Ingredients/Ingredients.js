@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useParams, Link, useHistory} from 'react-router-dom'
 import axios from "axios";
-import MealsList from "../../Components/MealsList/MealsList";
+import MealsList from "../../components/MealsList/MealsList";
 
 
 const Ingredients = () => {

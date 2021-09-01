@@ -1,12 +1,12 @@
 import React from "react";
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import Meals from "./Views/Meals/Meals";
-import MealDetails from "./Views/MealDetails/MealDetails";
-import Browse from "./Views/Browse/Browse";
-import Search from "./Components/Search/Search";
-import Home from "./Views/Home/Home";
-import Header from "./Components/Header/Header";
-import Ingredients from "./Views/Ingredients/Ingredients";
+import Meals from "./views/Meals/Meals";
+import MealDetails from "./views/MealDetails/MealDetails";
+import Browse from "./views/Browse/Browse";
+import Search from "./components/Search/Search";
+import Home from "./views/Home/Home";
+import Header from "./components/Header/Header";
+import Ingredients from "./views/Ingredients/Ingredients";
 import "./indexl.css"
 
 function App() {

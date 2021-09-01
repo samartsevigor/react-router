@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {useHistory, useParams} from 'react-router-dom'
 import axios from "axios";
-import Youtube from "../../Components/Youtube/Youtube";
-import Ingredients from "../../Components/Ingredients/Ingredients";
+import Youtube from "../../components/Youtube/Youtube";
+import Ingredients from "../../components/Ingredients/Ingredients";
 
 const MealDetails = () => {
     const [meal, setMeal] = useState({})

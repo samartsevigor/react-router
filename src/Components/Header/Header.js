@@ -1,11 +1,9 @@
 import React from 'react';
 import {Link, useHistory} from "react-router-dom";
-import {findAllByDisplayValue} from "@testing-library/react";
+
 
 const Header = () => {
-      <div>
 
-      </div>
 
     return (
         <div>

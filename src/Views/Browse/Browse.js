@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import axios from "axios";
 import {useHistory, useParams} from "react-router-dom"
-import MealsList from "../../Components/MealsList/MealsList";
+import MealsList from "../../components/MealsList/MealsList";
 
 const Browse = () => {
     const [meals, setMeals] = useState([])
