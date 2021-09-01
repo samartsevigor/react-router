@@ -1,13 +1,13 @@
 import React from "react";
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import Meals from "./views/Meals/Meals";
+
 import MealDetails from "./views/MealDetails/MealDetails";
 import Browse from "./views/Browse/Browse";
 import Search from "./components/Search/Search";
 import Home from "./views/Home/Home";
 import Header from "./components/Header/Header";
 import Ingredients from "./views/Ingredients/Ingredients";
-import "./indexl.css"
+import Meals from "./views/Meals/Meals";
 
 function App() {
   return (
