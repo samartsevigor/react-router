@@ -7,9 +7,12 @@ import MealsList from "../../components/MealsList/MealsList";
 const Ingredients = () => {
     const [meals, setMeals] = useState([])
     const params = useParams()
-    useEffect(async () => {
-      const {data} =  await axios(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${params.name}`)
-            setMeals(data.meals)
+    useEffect( () => {
+      const fetchApi = async () => {
+          const {data} =  await axios(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${params.name}`)
+          setMeals(data.meals)
+      }
+      fetchApi()
     }, [params.name])
 
     let history = useHistory();

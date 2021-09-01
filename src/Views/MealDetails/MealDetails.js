@@ -10,16 +10,19 @@ const MealDetails = () => {
     const [ingredients, setIngredients] = useState([])
     const params = useParams()
 
-    useEffect(async() => {
-       const {data: {meals}} = await axios(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.id}`)
-        const ingredientsList = Array(20).fill(0).reduce((acc, item, idx) => {
-            const ingredient = meals[0][`strIngredient${idx + 1}`]
-                    return ingredient ? [...acc, ingredient] : acc
-                }, [])
-        setIngredients(ingredientsList)
-            setMeal(meals[0])
-        const youtubeCode = meals[0].strYoutube.slice(meals[0].strYoutube.indexOf("v=") + 2, meals[0].strYoutube.lenght)
-            setYoutube(youtubeCode)
+    useEffect(() => {
+       const fetchApi = async () => {
+           const {data: {meals}} = await axios(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.id}`)
+           const ingredientsList = Array(20).fill(0).reduce((acc, item, idx) => {
+               const ingredient = meals[0][`strIngredient${idx + 1}`]
+               return ingredient ? [...acc, ingredient] : acc
+           }, [])
+           setIngredients(ingredientsList)
+           setMeal(meals[0])
+           const youtubeCode = meals[0].strYoutube.slice(meals[0].strYoutube.indexOf("v=") + 2, meals[0].strYoutube.lenght)
+           setYoutube(youtubeCode)
+       }
+       fetchApi()
     }, [params.id])
 
     let history = useHistory();
