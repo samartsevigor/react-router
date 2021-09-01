@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-
 const Header = () => {
     return (
         <div>
@@ -9,7 +8,6 @@ const Header = () => {
                <Link to="/" className="nav-link"> Home </Link>
                <Link to="/meals" className="nav-link"> View all meals </Link>
            </nav>
-
         </div>
     );
 };

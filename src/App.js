@@ -1,11 +1,11 @@
 import React from "react";
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import Header from "./components/Header/Header";
 import Home from "./views/Home/Home";
 import Meals from "./views/Meals/Meals";
 import MealDetails from "./views/MealDetails/MealDetails";
 import Browse from "./views/Browse/Browse";
 import Ingredients from "./views/Ingredients/Ingredients";
+import Header from "./components/Header/Header";
 
 
 function App() {
@@ -18,7 +18,6 @@ function App() {
             <Route path="/meals/:id" ><MealDetails /></Route>
             <Route path="/browse/:name"><Browse /></Route>
             <Route path="/ingredients/:name" ><Ingredients /></Route>
-
         </Router>
     </div>
   );
