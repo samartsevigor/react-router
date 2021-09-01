@@ -10,7 +10,6 @@ import Ingredients from "./views/Ingredients/Ingredients";
 
 function App() {
   return (
-
     <div className="container">
         <Router>
             <Header />
